@@ -1,7 +1,7 @@
 resource "aws_instance" "grafana_stack" {
   ami           = data.aws_ami.ubuntu.id
   instance_type =  "t3.medium"
-  vpc_security_group_ids      = [aws_security_group.grafana_stack.id]
+  vpc_security_group_ids      = [aws_security_group.grafana_stack_sg.id]
   associate_public_ip_address = true
   key_name = "vockey"
   user_data = file("init_script.sh")
