@@ -29,17 +29,25 @@ resource "aws_security_group" "grafana_stack_sg" {
   name        = "grafana_stack_sg"
   description = "Grafana Stack security group"
   ingress {
-    description      = "HTTP from Anywhere"
-    from_port        = 80
-    to_port          = 80
+    description      = "Prometheus Port"
+    from_port        = 9090
+    to_port          = 9090
     protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
   }
   
   ingress {
-    description      = "TLS from Anywhere"
-    from_port        = 443
-    to_port          = 443
+    description      = "Grafana Port"
+    from_port        = 3000
+    to_port          = 3000
+    protocol         = "tcp"
+    cidr_blocks      = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    description      = "App Port"
+    from_port        = 8081
+    to_port          = 8081
     protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
   }
