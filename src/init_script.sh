@@ -19,7 +19,7 @@ sudo apt-get -y install git docker-ce docker-ce-cli containerd.io docker-buildx-
 
 # Get repo
 
-git clone https://github.com/grafana/tutorial-environment.git
+git clone https://github.com/TheMatrix97/tutorial-environment
 
 cd tutorial-environment
 

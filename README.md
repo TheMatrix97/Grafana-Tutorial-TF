@@ -1,7 +1,9 @@
-# Pokedex TF App
+# Grafana fundamentals
 
-This project includes the required Terraform Files to deploy a `t3.micro` EC2 instance with the Pokedex angular app served via Nginx.
-You can find the Angular project here: https://github.com/TheMatrix97/pokedex-angular-app
+
+https://grafana.com/tutorials/grafana-fundamentals/1
+Grafana fundamentals tutorial deployed with terraform
+
 
 
 ## Deploy TF resources

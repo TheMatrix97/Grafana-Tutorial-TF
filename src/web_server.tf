@@ -27,7 +27,7 @@ data "aws_ami" "ubuntu" {
 
 resource "aws_security_group" "grafana_stack_sg" {
   name        = "grafana_stack_sg"
-  description = "PokeApp security group"
+  description = "Grafana Stack security group"
   ingress {
     description      = "HTTP from Anywhere"
     from_port        = 80
