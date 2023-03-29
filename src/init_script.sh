@@ -9,7 +9,7 @@ sudo apt-get -y remove docker docker-engine docker.io containerd runc
 # Install Docker
 sudo apt-get -y install ca-certificates curl gnupg lsb-release
 sudo mkdir -m 0755 -p /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor --batch -o /etc/apt/keyrings/docker.gpg
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
@@ -23,5 +23,5 @@ git clone https://github.com/TheMatrix97/tutorial-environment
 
 cd tutorial-environment
 
-docker compose up -d
+sudo docker compose up -d --force-recreate
 
