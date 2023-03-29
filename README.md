@@ -1,7 +1,7 @@
 # Grafana fundamentals
 
 
-https://grafana.com/tutorials/grafana-fundamentals/1
+https://grafana.com/tutorials/grafana-fundamentals
 Grafana fundamentals tutorial deployed with terraform
 
 
