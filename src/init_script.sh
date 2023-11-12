@@ -25,3 +25,5 @@ cd tutorial-environment
 
 sudo docker compose up -d --force-recreate
 
+
+
