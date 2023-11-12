@@ -28,13 +28,6 @@ data "aws_ami" "ubuntu" {
 resource "aws_security_group" "grafana_stack_sg" {
   name        = "grafana_stack_sg"
   description = "Grafana Stack security group"
-  ingress {
-    description      = "Prometheus Port"
-    from_port        = 9090
-    to_port          = 9090
-    protocol         = "tcp"
-    cidr_blocks      = ["0.0.0.0/0"]
-  }
   
   ingress {
     description      = "Grafana Port"
@@ -45,7 +38,7 @@ resource "aws_security_group" "grafana_stack_sg" {
   }
 
   ingress {
-    description      = "App Port"
+    description      = "Grafana News App Port"
     from_port        = 8081
     to_port          = 8081
     protocol         = "tcp"
